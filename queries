@@ -1,4 +1,4 @@
--- 1) increase all the incomes by 5% --
+-- 1) increase all incomes by 5% --
 
 update empleados set income = income + ((income * 5)/100) where id != 0;
 
