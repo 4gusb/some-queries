@@ -37,3 +37,15 @@ group by department;
 -- 8) create a table with same structure as the older one --
 create table empleados_copy like empleados;
 select * from empleados_copy;
+
+-- 9) delete duplicate records --
+
+ insert into empleados(full_name, income, department)
+ values
+ 	("Sancho Proudfoot", 230, "bbb");
+
+DELETE t1 FROM empleados t1
+INNER JOIN empleados t2
+WHERE t1.id > t2.id AND
+      t1.full_name = t2.full_name;
+      
